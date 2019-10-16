@@ -1,11 +1,11 @@
 # SwiftKVC-
 Swift KVC Without @objc Runtime using Mirror (Reflection)
 
-##What is it ?
+## What is it ?
 
 If you need KYC in Swift you have to rely on @objc runtime , exposing models to objc etc.To avoid all that you can use mirror to achieve exactly that.Just make your model confirm to the protocol StringAccessible and your done.
 
-##How ?
+## Procedure ?
 
 Make your model conform to the protocol 
 
