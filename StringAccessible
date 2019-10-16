@@ -1,0 +1,18 @@
+protocol StringAccessible {
+    
+}
+
+extension StringAccessible{
+    
+    func getValueFor<T>(key:String) -> T? {
+        let unwrappedMirror = Mirror(reflecting: self)
+        let filteredObjArray = unwrappedMirror.children.filter({ (child) -> Bool in
+            return child.label == key
+        })
+        guard filteredObjArray.count == 1 , let firstObject = filteredObjArray.first,let typecastedValue = firstObject.value as? T else{
+            return nil
+        }
+        return typecastedValue
+    }
+    
+}
